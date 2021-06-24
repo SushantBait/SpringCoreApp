@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- more bean definitions for services go here -->
+    <bean class="com.SpringApp.SpringApp2.Address" name="Add1">
+       
+      <constructor-arg type="String">
+            <value>ABC</value>
+      </constructor-arg>  
+      
+      <constructor-arg type="String">
+            <value>Pune</value>
+      </constructor-arg>  
+      
+      <constructor-arg type="String">
+            <value>MH</value>
+      </constructor-arg>  
+      
+      <constructor-arg type="String">
+            <value>India</value>
+      </constructor-arg>  
+        
+           
+    </bean>
+    <bean class="com.SpringApp.SpringApp2.Employee" name="Emp1">
+       
+         <constructor-arg type="int">
+            <value>123</value>
+      </constructor-arg> 
+       
+        <constructor-arg type="String">
+            <value>Sham</value>
+      </constructor-arg> 
+      
+      <constructor-arg type="com.SpringApp.SpringApp2.Address">
+            <ref bean="Add1"/>
+      </constructor-arg>
+        
+        </bean>
+</beans>
